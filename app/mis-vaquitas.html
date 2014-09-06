@@ -79,6 +79,7 @@
         <script src="js/AdminLTE/app.js" type="text/javascript"></script>
 
         <script>
+            var template = '';
             var userdata = {
                 username : 'devswert',
                 token : 'eyJpdiI6Im15Tm1kdU13Z1hqN0dPSmtOMG5kZlE9PSIsInZhbHVlIjoicGFGblRTTHNvTVlENkJObnlTZmVMbjR5MTMzY0MrUTlyTHVjQ1wvYTBOVEU9IiwibWFjIjoiMGYwNGM4MGNkYmNhN2QyY2JjMDQ4YzlkMmQwOThjYzM1NWM4N2ZhMjA5NmViYWZlOTNkMzgwYzA2MWMzZTRmZCJ9'
@@ -86,14 +87,37 @@
 
             $(document).on('ready',function(){
 
-                
+                $.ajax({
+                    url: 'http://api.vaquitapp.swert.cl/vaquitas',
+                    type: 'GET',
+                    data: {
+                        username: userdata.username,
+                        token   : userdata.token
+                    },
+                    success : function(response){
+                        console.log(response);
+                        if (response.codigo=='4201'){
 
-                var link = "asd";
-                var titulo = "Tuteirtueufnhs";
-                
-                var template = "<div class='elemento'><figure><img src='' alt='' class='circulo'></figure><a href='" + link + "'>'" +titulo + "'</a></div>";
+                            $.each(response.misVaquitas, function(val, val2) {
+                                template = "<div class='elemento'><figure><img src='' alt='' class='circulo'></figure><a href='" + val2.id + "'>" +val2.nombre + "</a></div>";
+                                $('#mi-lista-de-vaquitas').append(template);      
+                            });
 
-                $('#mi-lista-de-vaquitas').html(template);
+                            $.each(response.suscrito, function(val, val2) {
+                                
+                                template = "<div class='elemento'><figure><img src='' alt='' class='circulo'></figure><a href='" + val2.id + "'>" +val2.nombre + "</a></div>";
+                                $('#mi-lista-de-vaquitas').append(template);      
+                            });
+                            
+                        }
+                        else
+                        {
+                            template = "SIN DATOS :'(";
+                        }
+                        
+                    }
+                });
+                
             });
         </script>
 
