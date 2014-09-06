@@ -2,7 +2,7 @@
   "version": "1.0",
   "name": "Vaquitapp",
   "launch_path": "/app/index.html",
-  "description": "Vaquita es una aplicación de recaudación de fondos, que te permite financiar eventos entre amigos, causas beneficas en las cuales requieres donaciones de terceros, entre otros! Gracias a ella, podrás realizar recaudaciones de forma transparente, efectiva y muy simple.",
+  "description": "Vaquitapp te permite organizar recaudaciones de dinero de forma transparente, eficaz y muy simple.",
   "icons": {
     "16": "/app/images/logo-16.png",
     "32": "/app/images/logo-32.png",
