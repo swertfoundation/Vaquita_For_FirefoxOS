@@ -3533,3 +3533,16 @@ fieldset[disabled] .btn-vk.active {
   color: #587ea3;
   background-color: #ffffff;
 }
+
+/*
+Estilos temporales de prueba beta pre-lanzamiento de nuestro html :D;
+*/
+
+.elemento {
+  background-color: #8FBB44;
+  border-radius: 25px;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
