@@ -1,5 +1,7 @@
-@import url(//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic);
-@import url(//fonts.googleapis.com/css?family=Kaushan+Script);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+*{
+  font-family: 'Lato';
+}
 /*! 
  *   AdminLTE v1.2
  *   Author: AlmsaeedStudio.com
@@ -528,7 +530,7 @@ body > .header .logo {
   text-align: center;
   padding: 0 10px;
   width: 220px;
-  font-family: 'Kaushan Script', cursive;
+  font-family: 'Lato', cursive;
   font-weight: 500;
   height: 50px;
   display: block;
@@ -3544,5 +3546,26 @@ Estilos temporales de prueba beta pre-lanzamiento de nuestro html :D;
   padding: 10px;
   position: relative;
   width: 100%;
+  text-align: left;
   overflow: hidden;
+  margin-bottom: 1em;
+  -webkit-box-shadow: 0 2px 0px 0 #1F4D14;
+  box-shadow: 0 2px 0px 0 #1F4D14;
+}
+.elemento figure{
+  display: inline-block;
+  border-radius: 50%;
+  width: 50px;
+  overflow: hidden;
+  height: 50px;
+}
+.elemento a{
+  color: #EEE;
+  text-decoration: none;
+  font-size: 1.5em;
+  position: relative;
+  vertical-align: top;
+  top: 12px;
+  left: 10px;
+  font-weight: bold;
 }
